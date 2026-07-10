@@ -1,0 +1,137 @@
+/* Header.module.css - Estilo Glassmorphism Premium */
+
+/* NOVO: Container para centralizar a barra no topo */
+.headerContainer {
+  position: fixed; /* NOVO: Fixo no topo da tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centraliza a barra horizontalmente */
+  align-items: center;
+  z-index: 1000;
+  padding: 10px 0; /* Espaço sutil do topo */
+}
+
+/* NOVO: A "Pílula" de vidro centralizada */
+.headerBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  
+  /* Largura controlada com respiro nas laterais */
+  width: calc(100% - 10%); 
+  max-width: 1200px; /* Limita em telas muito grandes */
+  margin: 0 auto;
+  
+  /* ESTILO DE VIDRO (GLASSMORPHISM) */
+  background-color: rgba(30, 30, 30, 0.2); /* Fundo cinza escuro ultra-transparente */
+  backdrop-filter: blur(15px); /* O desfoque do fundo estilo iPhone */
+  -webkit-backdrop-filter: blur(15px); /* Suporte para Safari */
+  
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Borda fina para o reflexo no corte do vidro */
+  border-radius: 50px; /* Bordas arredondadas estilo pílula */
+  
+  padding: 10px 30px; /* Espaço interno confortável */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidade */
+}
+
+.logo img {
+  height: 30px; /* Reduzi um pouco para caber na pílula */
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espaçamento mais apertado para caber no centro */
+}
+
+/* Estilo dos Links com ícones */
+.nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.95rem; /* Ajuste sutil no tamanho */
+  font-weight: 500;
+  display: flex; /* Organiza ícone e texto na mesma linha */
+  align-items: center;
+  gap: 8px; /* Espaço entre ícone e texto */
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 20px; /* Para um efeito de fundo no hover */
+}
+
+/* Estilo dos Ícones SVGs */
+/* Estilo dos Ícones SVGs */
+.nav a svg {
+  height: 18px; 
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Hover premium no link */
+.nav a:hover {
+  color: var(--primary-color);
+  background-color: rgba(138, 43, 226, 0.1); /* Fundo roxo muito claro ao passar o mouse */
+}
+
+/* Dá uma leve balançada no ícone no hover */
+.nav a:hover svg {
+  transform: translateY(-2px);
+}
+
+/* Hambúrguer - Movemos para dentro da headerBar */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--text-color);
+}
+
+/* ================================================ */
+/* ===== RESPONSIVIDADE (MOBILE AJUSTADA) ===== */
+/* ================================================ */
+@media (max-width: 900px) {
+  /* Em telas menores, podemos esconder os textos e manter só ícones na pílula */
+  /* Mas para esse layout, vamos usar o menu hambúrguer a partir daqui */
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(16, 15, 20, 0.85); /* Vidro mais escuro no mobile */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Alinha os textos à esquerda no mobile */
+    gap: 30px;
+    padding: 0 10%; /* Respiro lateral no mobile */
+    transition: right 0.4s ease-in-out;
+    z-index: 1001;
+  }
+  
+  .nav.active {
+    right: 0;
+  }
+
+  .nav a {
+    font-size: 1.3rem;
+    width: 100%; /* Ocupa largura total para o clique */
+    justify-content: flex-start;
+  }
+}
