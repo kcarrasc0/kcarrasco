@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './materiaisGratuitos.module.css';
+import styles from './MateriaisGratuitos.module.css';
 
 // IMAGENS DA CAPA E DOS CARDS
 import fotoCapaMateriais from '../../assets/images/kcarrasco/foto-experiencia.jpg'; 

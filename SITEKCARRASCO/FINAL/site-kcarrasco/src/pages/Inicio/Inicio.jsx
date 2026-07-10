@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import styles from './inicio.module.css';
+import styles from './Inicio.module.css';
 import { Link } from 'react-router-dom';
 
 

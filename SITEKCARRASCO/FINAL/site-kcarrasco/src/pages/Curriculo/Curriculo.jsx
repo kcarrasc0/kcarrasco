@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './curriculo.module.css';
+import styles from './Curriculo.module.css';
 import fotoCapa from '../../assets/images/kcarrasco/KCARRASCO.jpg'; // Usando a mesma foto da home
 
 const Curriculo = () => {

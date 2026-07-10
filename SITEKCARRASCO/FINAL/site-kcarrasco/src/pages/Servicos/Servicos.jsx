@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './servicos.module.css';
+import styles from './Servicos.module.css';
 
 // Seção 1 - Capa
 import fotoServicos from '../../assets/images/kcarrasco/foto-servicos.png'; 
