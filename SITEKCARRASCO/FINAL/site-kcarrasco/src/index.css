@@ -7,8 +7,20 @@
   --font-main: 'Poppins', sans-serif; /* Adicione a fonte Poppins no seu index.html */
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
   font-family: var(--font-main);
   background-color: var(--background-color);
   color: var(--text-color);

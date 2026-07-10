@@ -38,6 +38,7 @@
   flex: 0 0 50%; 
   max-width: 50%; 
   z-index: 1;
+  min-width: 0;
 }
 
 /* Títulos da Capa (Ajustados para a nova tipografia) */
@@ -58,6 +59,8 @@
   color: var(--text-secondary-color);
   line-height: 1.7;
   margin-bottom: 20px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .fraseImpacto {
@@ -383,35 +386,53 @@
   .heroSection {
     flex-direction: column;
     min-height: auto;
-    padding: 120px 5% 60px 5%;
+    padding: 100px 4% 48px;
+    overflow: hidden;
+    width: 100%;
   }
   .textContainer {
+    flex: none;
     flex-basis: auto; 
     max-width: 100%;
+    width: 100%;
     text-align: center;
+    padding: 20px 16px;
+    background: rgba(30, 30, 35, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    overflow-x: hidden;
+  }
+  .textContainer h2 {
+    font-size: 2rem;
   }
   .textContainer p {
-    text-align: left; 
+    text-align: left;
+    font-size: 0.98rem;
   }
   .imageContainer {
-    flex: auto; 
+    flex: none; 
     width: 100%;
-    height: 350px; 
-    margin-top: 40px; 
+    max-width: 100%;
+    height: clamp(260px, 45svh, 380px);
+    min-height: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
     order: -1; 
   }
   .imageContainer img {
     mask-image: linear-gradient(to top, transparent 0%, black 25%);
     -webkit-mask-image: linear-gradient(to top, transparent 0%, black 25%);
+    object-position: center 20%;
   }
   .skillsSection {
     flex-direction: column; 
-    padding: 60px 5%;
+    padding: 60px 4%;
     gap: 50px; 
   }
   .causaContainer,
   .skillsContainer {
     max-width: 100%;
+    width: 100%;
   }
   .iconGrid {
     justify-content: center; 

@@ -193,12 +193,20 @@
   position: relative;
   z-index: 1;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .sobreMimTextGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  width: 100%;
+  min-width: 0;
+}
+
+.textColumn {
+  min-width: 0;
 }
 
 .textColumn p {
@@ -206,6 +214,8 @@
   line-height: 1.8;
   font-size: 1.05rem;
   margin-bottom: 20px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .textColumn strong {
@@ -402,7 +412,16 @@
   }
   
   .sobreMimGlassPanel {
-    padding: 30px;
+    padding: 24px 18px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 18px;
+  }
+
+  .textColumn p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    text-align: left;
   }
   
   .impactoGrid {
@@ -684,8 +703,9 @@
 
 @media (max-width: 768px) {
   .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 4%;
+    width: 100%;
+    max-width: 100%;
   }
 
   .homeCapa {
