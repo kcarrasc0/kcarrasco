@@ -92,7 +92,7 @@ const ProjetosExperiencia = () => {
             <div className={styles.cardContent}>
               <h4>NOOK</h4>
               <p>Startup de soluções tecnológicas educacionais inclusivas.</p>
-              <a href="https://www.nookcorporation.com/" target="_blank" rel="noopener noreferrer" className={styles.outlineButton}>SABER MAIS</a>
+              <a href="https://nookcorporation.com/" target="_blank" rel="noopener noreferrer" className={styles.outlineButton}>SABER MAIS</a>
             </div>
           </div>
           <div className={styles.projetoCard}>
@@ -166,7 +166,7 @@ const ProjetosExperiencia = () => {
             <div className={styles.cardContent}>
               <h4>Site NOOK Corporation</h4>
               <p>Desenvolvimento do portal institucional oficial da NOOK.</p>
-              <a href="https://www.nookcorporation.com/" target="_blank" rel="noopener noreferrer" className={styles.outlineButton}>SABER MAIS</a>
+              <a href="https://nookcorporation.com/" target="_blank" rel="noopener noreferrer" className={styles.outlineButton}>SABER MAIS</a>
             </div>
           </div>
           <div className={styles.projetoCard}>

@@ -82,3 +82,13 @@ body.light-mode-a11y section[class*="glass"] {
   background: rgba(255, 255, 255, 0.6) !important;
   border-color: rgba(0, 0, 0, 0.1) !important;
 }
+
+/* Menu hambúrguer aberto: não deixa botões flutuantes/VLibras bloquear Materiais */
+body.menu-open .floating-actions,
+body.menu-open [vw],
+body.menu-open [vw-access-button],
+body.menu-open .access-button {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}

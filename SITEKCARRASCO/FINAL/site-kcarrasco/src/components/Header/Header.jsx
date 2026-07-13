@@ -15,10 +15,14 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if (!menuOpen) return undefined;
+    if (!menuOpen) {
+      document.body.classList.remove('menu-open');
+      return undefined;
+    }
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('menu-open');
 
     const onKeyDown = (event) => {
       if (event.key === 'Escape') closeMenu();
@@ -28,6 +32,7 @@ const Header = () => {
 
     return () => {
       document.body.style.overflow = previousOverflow;
+      document.body.classList.remove('menu-open');
       window.removeEventListener('keydown', onKeyDown);
     };
   }, [menuOpen]);

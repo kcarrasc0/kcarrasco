@@ -128,7 +128,7 @@ const Inicio = () => {
             <div className={styles.cardContent}>
               <h4>NOOK Corporation</h4>
               <p>Startup de soluções tecnológicas educacionais inclusivas, conectando inovação, impacto social e sustentabilidade.</p>
-              <button className={styles.outlineButton}><a href="https://www.nookcorporation.com/">Ver Projeto</a></button>
+              <a href="https://nookcorporation.com/" target="_blank" rel="noopener noreferrer" className={styles.outlineButton}>Ver Projeto</a>
             </div>
           </div>
 
@@ -148,7 +148,7 @@ const Inicio = () => {
             <div className={styles.cardContent}>
               <h4>YARA</h4>
               <p>Plataforma que integra docentes e discentes, promovendo inclusão e suporte a alunos com neurodivergencia e individualidades</p>
-              <button className={styles.outlineButton}><a href="https://www.nookcorporation.com/">Ver Projeto</a></button>
+              <a href="https://nookcorporation.com/" target="_blank" rel="noopener noreferrer" className={styles.outlineButton}>Ver Projeto</a>
             </div>
           </div>
         </div>

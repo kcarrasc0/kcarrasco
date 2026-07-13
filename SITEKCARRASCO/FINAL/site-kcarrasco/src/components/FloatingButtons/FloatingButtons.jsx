@@ -55,7 +55,7 @@ const FloatingButtons = () => {
   };
 
   return (
-    <div className={styles.floatingContainer}>
+    <div className={`${styles.floatingContainer} floating-actions`}>
       
       {/* MENU DE ACESSIBILIDADE (Abre para cima) */}
       <div className={`${styles.a11yMenu} ${isA11yOpen ? styles.open : ''}`}>

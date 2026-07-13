@@ -187,7 +187,7 @@
     position: fixed;
     top: 14px;
     right: 18px;
-    z-index: 1005;
+    z-index: 10060;
     background: rgba(30, 30, 35, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 50%;
@@ -218,7 +218,7 @@
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1003;
+    z-index: 10040;
   }
 
   .overlayVisible {
@@ -239,7 +239,7 @@
     height: 100dvh;
     height: 100vh;
     margin: 0;
-    padding: 72px 20px 32px;
+    padding: 72px 20px calc(120px + env(safe-area-inset-bottom, 0px));
     background-color: rgba(16, 15, 20, 0.98);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -253,7 +253,7 @@
     box-sizing: border-box;
     transform: translate3d(100%, 0, 0);
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1004;
+    z-index: 10050;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;

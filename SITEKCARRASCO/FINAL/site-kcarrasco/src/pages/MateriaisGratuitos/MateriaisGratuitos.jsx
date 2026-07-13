@@ -84,7 +84,7 @@ const MateriaisGratuitos = () => {
               Prepare-se para encontrar um ambiente de aprendizado imersivo onde o KCarrasquinho destrava novos módulos, distribui conquistas e ajuda você a decifrar a lógica de programação de um jeito direto, periférico e focado no mercado.
             </p>
             <a 
-              href="https://caixadosdevs.kcarrasco.com.br" 
+              href="https://caixa-dos-devs.kcarrasco.com" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={styles.outlineButton}
