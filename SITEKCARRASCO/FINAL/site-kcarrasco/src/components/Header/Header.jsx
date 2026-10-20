@@ -45,6 +45,9 @@ const Header = () => {
         aria-hidden={!menuOpen}
       />
 
+      {/* ========================================= */}
+      {/* MENU MOBILE (GAVETA)                      */}
+      {/* ========================================= */}
       <nav
         className={`${styles.nav} ${menuOpen ? styles.active : ''}`}
         aria-label="Menu principal"
@@ -96,6 +99,15 @@ const Header = () => {
           </svg>
           Materiais
         </Link>
+
+        {/* NOVA OPÇÃO: CONTEÚDOS (MOBILE) */}
+        <Link to="/conteudos" onClick={closeMenu}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+          </svg>
+          Conteúdos
+        </Link>
       </nav>
 
       <div className={styles.headerBar}>
@@ -105,6 +117,9 @@ const Header = () => {
           </Link>
         </div>
 
+        {/* ========================================= */}
+        {/* MENU DESKTOP                              */}
+        {/* ========================================= */}
         <div className={styles.desktopNav}>
           <Link to="/" onClick={closeMenu}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -152,6 +167,15 @@ const Header = () => {
               <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
             </svg>
             Materiais
+          </Link>
+
+          {/* NOVA OPÇÃO: CONTEÚDOS (DESKTOP) */}
+          <Link to="/conteudos" onClick={closeMenu}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="10 8 16 12 10 16 10 8"></polygon>
+            </svg>
+            Conteúdos
           </Link>
         </div>
 

@@ -25,22 +25,19 @@
   align-items: center;
 }
 
-/* Título de destaque (ex: "Sobre Mim", "Impacto e Causa") */
-.sectionHeader h2 {
-  font-size: 1rem; /* Pequeno e elegante */
+/* Subtítulo superior (ex: "Sobre Mim", "Impacto e Causa") - AGORA É H3 */
+.sectionHeader h3 {
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: var(--primary-color);
+  color: var(--primary-color); /* Cor sólida, sem excesso de gradiente */
   margin-bottom: 15px;
-  background: linear-gradient(90deg, var(--primary-color), #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Efeito degradê no texto */
   font-weight: 800;
 }
 
-/* Subtítulo principal de impacto */
-.sectionHeader h3 {
-  font-size: 3rem; /* Grande e imponente */
+/* Título principal de impacto - AGORA É H2 */
+.sectionHeader h2 {
+  font-size: 3rem;
   color: var(--text-color);
   margin: 0 0 20px 0;
   font-weight: 800;
@@ -109,7 +106,7 @@
 /* BOTÕES ESTILO GLASSMORPHISM */
 .ctaButton {
   padding: 15px 30px;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); /* Cor de fundo sólida */
   color: var(--text-color);
   border: none;
   border-radius: 50px;
@@ -132,11 +129,11 @@
   padding: 15px 30px;
   text-align: center;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.05); /* Fundo de vidro sutil */
-  backdrop-filter: blur(12px); /* Desfoque do vidro */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px); 
   -webkit-backdrop-filter: blur(12px);
   color: var(--text-color);
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Borda do vidro */
+  border: 1px solid rgba(255, 255, 255, 0.15); 
   border-radius: 50px;
   cursor: pointer;
   font-size: 1rem;
@@ -172,7 +169,6 @@
   flex-direction: column; 
 }
 
-/* Mantém os efeitos de luz no fundo que você já tinha */
 .sobreMim::before, .sobreMim::after {
   content: ''; position: absolute; z-index: 0; border-radius: 50%; filter: blur(50px);
 }
@@ -228,7 +224,7 @@
   justify-content: center;
   margin-top: 40px;
   padding-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória de vidro */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Seção 3 - Destaques e Projetos */
@@ -258,12 +254,11 @@
   flex-wrap: wrap;
 }
 
-/* CARDS DE PROJETO COM EFEITO VIDRO */
 .projetoCard {
-  background: rgba(30, 30, 35, 0.4); /* Vidro escuro */
+  background: rgba(30, 30, 35, 0.4); 
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Corte do vidro */
+  border: 1px solid rgba(255, 255, 255, 0.1); 
   border-radius: 20px;
   overflow: hidden;
   width: 100%;
@@ -317,7 +312,6 @@
   flex-direction: column; 
 }
 
-/* Mantém o efeito de luz inferior */
 .impactoSection::before {
   content: ''; position: absolute; z-index: 0; width: 900px; height: 800px; 
   background: rgba(138, 43, 226, 0.15); bottom: -200px; left: -200px; border-radius: 50%; filter: blur(120px);
@@ -334,7 +328,6 @@
   z-index: 1;
 }
 
-/* CARD PADRÃO DE IMPACTO */
 .impactCard {
   background: rgba(30, 30, 35, 0.3);
   backdrop-filter: blur(15px);
@@ -379,10 +372,9 @@
   font-size: 1rem;
 }
 
-/* CARD DE DESTAQUE (Ocupa as duas colunas na base do grid) */
 .impactCardHighlight {
-  grid-column: span 2; /* Faz o card esticar por todo o grid */
-  background: rgba(138, 43, 226, 0.08); /* Fundo levemente roxo */
+  grid-column: span 2; 
+  background: rgba(138, 43, 226, 0.08); 
   border-color: rgba(138, 43, 226, 0.2);
   text-align: center;
 }
@@ -407,7 +399,7 @@
 /* ========================================================= */
 @media (max-width: 900px) {
   .sobreMimTextGrid {
-    grid-template-columns: 1fr; /* Empilha as colunas de texto */
+    grid-template-columns: 1fr;
     gap: 20px;
   }
   
@@ -425,11 +417,11 @@
   }
   
   .impactoGrid {
-    grid-template-columns: 1fr; /* Empilha os cards de impacto */
+    grid-template-columns: 1fr; 
   }
 
   .impactCardHighlight {
-    grid-column: span 1; /* Retira o span duplo no mobile */
+    grid-column: span 1; 
     text-align: left;
   }
 
@@ -484,7 +476,6 @@
   z-index: 1;
 }
 
-/* CARDS DE DEPOIMENTO COM EFEITO VIDRO */
 .depoimentoCard {
   background: rgba(30, 30, 35, 0.4);
   backdrop-filter: blur(20px);
@@ -508,7 +499,7 @@
   top: -50px;
   left: 50%;
   transform: translateX(-50%);
-  border: 4px solid rgba(30, 30, 35, 1); /* Moldura sólida para destacar o avatar */
+  border: 4px solid rgba(30, 30, 35, 1);
 }
 
 .depoimentoContent {
@@ -546,7 +537,6 @@
   padding-bottom: 150px;
 }
 
-/* Efeito de luz no fundo do contato */
 .contatoSection::before {
   content: '';
   position: absolute;
@@ -566,13 +556,12 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   width: 100%;
-  max-width: 800px; /* Mantém o grid centralizado e não muito esticado */
+  max-width: 800px; 
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
-/* CARDS DE CONTATO */
 .contatoCard {
   background: rgba(30, 30, 35, 0.4);
   backdrop-filter: blur(20px);
@@ -584,20 +573,18 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  text-decoration: none; /* Tira o sublinhado do link */
+  text-decoration: none; 
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Efeito Premium no Hover */
 .contatoCard:hover {
   transform: translateY(-8px);
-  background: rgba(138, 43, 226, 0.15); /* Fundo sutilmente roxo */
+  background: rgba(138, 43, 226, 0.15); 
   border-color: var(--primary-color);
   box-shadow: 0 15px 40px rgba(138, 43, 226, 0.3);
 }
 
-/* Container do Ícone */
 .contatoIcon {
   width: 60px;
   height: 60px;
@@ -639,13 +626,13 @@
 }
 
 .contatoCard:hover p {
-  color: var(--text-color); /* Texto fica mais brilhante ao passar o mouse */
+  color: var(--text-color); 
 }
 
 /* RESPONSIVIDADE DO CONTATO */
 @media (max-width: 768px) {
   .contatoGrid {
-    grid-template-columns: 1fr; /* Empilha os 4 cards em telas pequenas */
+    grid-template-columns: 1fr; 
     gap: 20px;
     padding: 0 15px;
   }
@@ -654,7 +641,7 @@
   }
 }
 
-/* RESPONSIVIDADE */
+/* RESPONSIVIDADE GERAL COM FIX DOS TÍTULOS */
 @media (max-width: 1024px) {
   .section {
     padding: 80px 5%;
@@ -688,12 +675,13 @@
     line-height: 1.4;
   }
 
-  .sectionHeader h2 {
-    font-size: 2.2rem;
+  /* Tamanho correto dos títulos no tablet */
+  .sectionHeader h3 {
+    font-size: 0.95rem;
   }
 
-  .sectionHeader h3 {
-    font-size: 1.8rem;
+  .sectionHeader h2 {
+    font-size: 2.2rem;
   }
 
   .depoimentosGrid {
@@ -762,6 +750,15 @@
 
   .homeCapa h3 {
     font-size: 0.95rem;
+  }
+
+  /* Tamanho correto dos títulos no celular */
+  .sectionHeader h3 {
+    font-size: 0.85rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.8rem;
   }
 
   .buttonGroup {

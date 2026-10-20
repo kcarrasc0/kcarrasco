@@ -10,6 +10,7 @@ import Servicos from './pages/Servicos/Servicos';
 import MateriaisGratuitos from './pages/MateriaisGratuitos/MateriaisGratuitos';
 import FloatingButtons from './components/FloatingButtons/FloatingButtons';
 import Curriculo from './pages/Curriculo/Curriculo';
+import Conteudos from './pages/Conteudos/Conteudos'; // Importe o componente Conteudos
 
 function App() {
   return (
@@ -24,8 +25,10 @@ function App() {
           <Route path="/materiais-gratuitos" element={<MateriaisGratuitos />} />
           <Route path="/curriculo" element={<Curriculo />} />
         </Routes>
+        <Routes>
+          <Route path="/conteudos" element={<Conteudos />} />
+        </Routes>
       </main>
-      <FloatingButtons /> {/* Adicione ele aqui fora das rotas! */}
       <Footer />
     </>
   );

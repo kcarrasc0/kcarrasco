@@ -3,7 +3,6 @@ import emailjs from '@emailjs/browser';
 import styles from './Inicio.module.css';
 import { Link } from 'react-router-dom';
 
-
 // Seção 1 - Capa
 import fotoCapa from '../../assets/images/kcarrasco/KCARRASCO.jpg';
 
@@ -18,9 +17,6 @@ import depoimento2 from '../../assets/images/depoimentos/depoimento2.jpg'
 import depoimento3 from '../../assets/images/depoimentos/depoimento3.jpg'
 
 const Inicio = () => {
-  // ================================================
-  // 3. LÓGICA DO FORMULÁRIO (AGORA DENTRO DO COMPONENTE)
-  // ================================================
   const form = useRef();
   const [isSending, setIsSending] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
@@ -30,7 +26,6 @@ const Inicio = () => {
     setIsSending(true);
     setStatusMessage('Enviando sua mensagem...');
 
-    // !!! IMPORTANTE: SUBSTITUA COM SUAS CHAVES DO EMAILJS !!!
     emailjs.sendForm(
       'service_drc76l4', 
       'template_e0ho44s', 
@@ -38,16 +33,14 @@ const Inicio = () => {
       'hV_cAquI4XGf9d2s2'
     )
       .then((result) => {
-          // Bloco de SUCESSO
-          console.log('E-MAIL ENVIADO COM SUCESSO:', result.text); // Para depuração
+          console.log('E-MAIL ENVIADO COM SUCESSO:', result.text); 
           setStatusMessage('Mensagem enviada com sucesso!');
           setIsSending(false);
           setTimeout(() => setStatusMessage(''), 5000);
           form.current.reset();
       })
       .catch((error) => {
-          // Bloco de ERRO
-          console.log('FALHA NO ENVIO DO E-MAIL:', error.text); // Para depuração
+          console.log('FALHA NO ENVIO DO E-MAIL:', error.text); 
           setStatusMessage('Ocorreu um erro. Verifique suas chaves ou tente novamente.');
           setIsSending(false);
           setTimeout(() => setStatusMessage(''), 5000);
@@ -80,8 +73,8 @@ const Inicio = () => {
        {/*Seção 2 - Sobre mim*/}
        <section id="sobre" className={`${styles.section} ${styles.sobreMim}`}>
         <div className={styles.sectionHeader}>
-          <h2>Sobre Mim</h2>
-          <h3>Ancestralidade e Caminhada</h3>
+          <h3>Sobre Mim</h3>
+          <h2>Ancestralidade e Caminhada</h2>
           <p className={styles.subtituloSobre}>
             De onde venho, minha conexão com o território e minha visão de mundo.
           </p>
@@ -115,10 +108,9 @@ const Inicio = () => {
       
       {/*Seção 3 - Projetos */}
      <section id="projetos" className={`${styles.section} ${styles.projetosSection}`}>
-        {/* Usamos a mesma estrutura de cabeçalho da seção anterior */}
         <div className={styles.sectionHeader}>
-          <h2>Destaques de Projetos</h2>
-          <h3>Conheça mais meus projetos</h3>
+          <h3>Destaques de Projetos</h3>
+          <h2>Conheça mais meus projetos</h2>
         </div>
 
         <div className={styles.projetosGrid}>
@@ -157,11 +149,10 @@ const Inicio = () => {
       {/*Seção 4 - Impacto e Causa*/}
       <section id="impacto" className={`${styles.section} ${styles.impactoSection}`}>
         <div className={styles.sectionHeader}>
-          <h2>Impacto e Causa</h2>
-          <h3>Qual o propósito?</h3>
+          <h3>Impacto e Causa</h3>
+          <h2>Qual o propósito?</h2>
         </div>
 
-        {/* Grid Dinâmico de Cards de Vidro */}
         <div className={styles.impactoGrid}>
           
           <div className={styles.impactCard}>
@@ -192,13 +183,11 @@ const Inicio = () => {
       
       {/*Seção 5 - Depoimentos*/}
        <section id="depoimentos" className={`${styles.section} ${styles.depoimentosSection}`}>
-        {/* Bloco de títulos centralizados */}
         <div className={styles.sectionHeader}>
-          <h2>Depoimentos</h2>
-          <h3>Parceiros e clientes</h3>
+          <h3>Depoimentos</h3>
+          <h2>Parceiros e clientes</h2>
         </div>
 
-        {/* Grid para os cards de depoimentos */}
         <div className={styles.depoimentosGrid}>
           {/* Card de Depoimento 1 */}
           <div className={styles.depoimentoCard}>
@@ -235,8 +224,8 @@ const Inicio = () => {
      {/* Seção 6 - Contato */}
       <section id="contato" className={`${styles.section} ${styles.contatoSection}`}>
         <div className={styles.sectionHeader}>
-          <h2>Contato</h2>
-          <h3>Vamos construir juntos?</h3>
+          <h3>Contato</h3>
+          <h2>Vamos construir juntos?</h2>
           <p className={styles.subtituloSobre}>Escolha a melhor opção para falarmos</p>
         </div>
 
