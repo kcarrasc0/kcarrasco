@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './MateriaisGratuitos.module.css';
 
 // IMAGENS DA CAPA E DOS CARDS
-import fotoCapaMateriais from '../../assets/images/kcarrasco/foto-experiencia.jpg'; 
+import fotoCapaMateriais from '../../assets/images/kcarrasco/didaticoeu.png'; 
 import CapaOQueEtecnologia from '../../assets/images/materiais/CapaOQueEtecnologia.png';
 import CapaBackFrontFullStack from '../../assets/images/materiais/CapaBackFrontFullStack.png';
 import CapaLinguagensProgramacao from '../../assets/images/materiais/CapaLinguagensProgramacao.png';

@@ -17,32 +17,32 @@ const Conteudos = () => {
     {
       id: 1,
       capa: 'https://via.placeholder.com/400x580/1a1a24/8a2be2?text=Capa+Pitch+1', // Substitua por: CapaPitch1
-      tag: 'EdTech',
-      titulo: 'Pitch Deck - Startup Educacional',
+      tag: 'Tipo',
+      titulo: 'Pitch Deck',
       autor: 'Desenrolando Pitch #01',
       link: '/pitchs/pitch-educacional.pdf'
     },
     {
       id: 2,
       capa: 'https://via.placeholder.com/400x580/1a1a24/8a2be2?text=Capa+Pitch+2', // Substitua por: CapaPitch2
-      tag: 'HealthTech',
-      titulo: 'Apresentação de Impacto na Saúde',
+      tag: 'Tipo',
+      titulo: 'Pitch Deck',
       autor: 'Desenrolando Pitch #02',
       link: '/pitchs/pitch-saude.pdf'
     },
     {
       id: 3,
       capa: 'https://via.placeholder.com/400x580/1a1a24/8a2be2?text=Capa+Pitch+3',
-      tag: 'FinTech',
-      titulo: 'Modelo de Negócios para Fintech',
+      tag: 'Tipo',
+      titulo: 'Pitch Deck',
       autor: 'Desenrolando Pitch #03',
       link: '/pitchs/pitch-fintech.pdf'
     },
     {
       id: 4,
       capa: 'https://via.placeholder.com/400x580/1a1a24/8a2be2?text=Capa+Pitch+4',
-      tag: 'Social',
-      titulo: 'Pitch de Negócios de Impacto Social',
+      tag: 'Tipo',
+      titulo: 'Pitch Deck',
       autor: 'Desenrolando Pitch #04',
       link: '/pitchs/pitch-social.pdf'
     }
@@ -64,7 +64,7 @@ const Conteudos = () => {
             Acompanhe análises, tutoriais e o nosso quadro oficial de empreendedorismo onde dissecamos o ecossistema de startups.
           </p>
           <div className={styles.buttonGroup}>
-            <a href="https://www.youtube.com/@SeuCanal" target="_blank" rel="noopener noreferrer" className={styles.outlineButton}>
+            <a href="https://www.youtube.com/@kcarrasco" target="_blank" rel="noopener noreferrer" className={styles.outlineButton}>
               Acessar Canal do YouTube
             </a>
           </div>
